@@ -5,15 +5,15 @@ static const Block blocks[] = {
 
   //{"🧠", "free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g",	30,		0},
 
-  {"", "weather",             0, 10},
-	{"", "internet",						0,		10},
+	// {"", "weather",             0, 10},
+	// {"", "internet",						0,		10},
 	{"", "volume",						0,		10},
 
-	{"☀", "light | sed 's/\\..*//g'",					0,		11},
+	{"☀", "xbacklight -get | awk -F. '{print $1}'",					0,		11},
 
 	{"", "battery",						5,		0},
 
-	{"🌡", "sensors | awk '/^temp1:/{print $2}'",				5,		0},
+	// {"🌡", "sensors | awk '/^temp1:/{print $2}'",				5,		0},
 
 	{"", "clock",						5,		0},
 };
